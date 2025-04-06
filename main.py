@@ -13,6 +13,7 @@ def main():
 
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
+    
     Player.containers = (updatable, drawable)
 
     player = Player(x = SCREEN_WIDTH / 2, y = SCREEN_HEIGHT / 2)
@@ -28,10 +29,12 @@ def main():
 
         # Fill the screen with black and refresh
         screen.fill((0,0,0))
+
         updatable.update(dt)
-        for item in drawable:
-            item.draw(screen)
-        # player.draw(screen)
+
+        for obj in drawable:
+            obj.draw(screen)
+        
         pygame.display.flip()
 
         #limit the frame rate to 60 FPS
