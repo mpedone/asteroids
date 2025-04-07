@@ -22,7 +22,6 @@ def main():
     AsteroidField.containers = (updatable)
 
     player = Player(x = SCREEN_WIDTH / 2, y = SCREEN_HEIGHT / 2)
-    asteroid = Asteroid(x = SCREEN_WIDTH / 4, y = SCREEN_HEIGHT / 4, radius = 60)
     asteroid_field = AsteroidField()
 
     print("Starting Asteroids!")
